@@ -1,0 +1,53 @@
+{
+    "name": "draft",
+    "displayName": "draft",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "shenwe",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:draft.init",
+        "onCommand:draft.create",
+        "onCommand:draft.up",
+        "onCommand:draft.connect"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "draft.init",
+                "title": "Draft Init"
+            },
+            {
+                "command": "draft.create",
+                "title": "Draft Create"
+            },
+            {
+                "command": "draft.up",
+                "title": "Draft Up"
+            },
+            {
+                "command": "draft.connect",
+                "title": "Draft Connect"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
